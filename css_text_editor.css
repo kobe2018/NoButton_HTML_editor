@@ -1,0 +1,29 @@
+/* ココがコメント */
+
+@font-face {
+    src: url('./GeoMathMono0062.ttf') format('truetype');
+    font-family: 'GeoMathMono';
+}
+/*
+@font-face {
+    src: url(https://github.com/kobe2018/GeoMathMonospace/blob/master/GeoMathMono0062.ttf?raw=true) format('truetype');
+    font-family: 'GeoMathMono';
+}
+*/
+textarea{
+ width:99.0%;
+ height:96vh;
+ font-family:GeoMathMono;
+ font-size:24px;
+}
+body, textarea{
+　margin: 1;
+　padding: 1;
+}
+
+#ID_svg{
+    position = 'absolute'; 
+    left = '100px'; 
+    style.top  = '100px'; 
+
+}

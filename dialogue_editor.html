@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<title>📝対話エディタ</title>
+<meta charset="utf-8" />
+<script src="./function_company.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css_text_editor.css"><style></style>
+
+<script src="./return/function_return_change_textarea_to_svg.js"></script>
+<script src="./return/function_return_safeEval.js"></script>
+<script src="./return/function_return_split_textarea_on_newLine.js"></script>
+<script src="./return/function_return_string_width.js"></script>
+
+<script src="./function_output_time.js"></script>
+<script src="./function_save_scroll.js"></script>
+
+<script src="./function_create_block_shape.js"></script>
+<script src="./function_create_math_graph_bar.js"></script>
+<script src="./function_create_math_graph_plot.js"></script>
+
+<script src="./function_create_math_calc.js"></script>
+<script src="./function_create_math_log.js"></script>
+<script src="./function_create_math_factor.js"></script>
+<script src="./function_create_math_expand.js"></script>
+
+<script src="./function_create_speech.js"></script>
+<script src="./function_create_map.js"></script>
+<script src="./function_create_help.js"></script>
+
+<script src="./function_keydown.js"></script>
+<script src="./function_keyup.js"></script>
+
+<script>
+"use strict";
+var esc_flag=true;
+window.addEventListener("DOMContentLoaded",function(){
+    let element = document.querySelector('textarea');
+    document.querySelector('body').style.backgroundColor = 'white';
+    
+    keydown(element);
+    keyup(element);
+
+/*
+    document.getElementById("ID_textarea01").addEventListener("dragover", function(e){
+        e.preventDefault();//ブラウザーでファイルを開かないようにする
+        document.getElementById("ID_textarea01").style.backgroundColor = "yellow";
+    },false);
+
+    document.getElementById("ID_textarea01").addEventListener("dragleave", function(e){
+        e.preventDefault();//ブラウザーでファイルを開かないようにする
+        document.getElementById("ID_textarea01").style.backgroundColor = "white";
+    },false);
+
+    document.getElementById("ID_textarea01").addEventListener("drop", function(e){
+        //event.preventDefault();//ブラウザーでファイルを開かないようにする
+        document.getElementById("ID_textarea01").style.backgroundColor = "white";
+        let f = e.dataTransfer.files;
+        console.log(f);
+        //alert("name: "+f[0].name +"\nsize: " + f[0].size +"\ntype:"+ f[0].type );
+
+        let str1 = e.dataTransfer.types;
+        console.log(str1);
+
+        //let str2 = event.dataTransfer.types[0].getData();
+        //console.log(str2);
+
+        var data_transfer = event.dataTransfer;
+    },false);
+
+
+document.getElementById("ID_textarea01").addEventListener("drop", onDrop, false);
+
+function onDrop(event){
+    event.preventDefault();//ブラウザーでファイルを開かないようにする
+         var files = event.dataTransfer.files;
+         var encode_type = document.getElementById("ID_textarea01").value;
+             // 複数のファイルから1つずつファイルを選択
+         for(var i=0; i< files.length; i++){
+            var f = files[i];
+        // ①FileReaderオブジェクトの生成
+        var reader = new FileReader();
+        // ②画像ファイルかテキストファイルかを判定
+        if(!f.type.match('image.*') && !f.type.match('text.plain') && !f.name.match(/csv$/m)){
+           alert("画像ファイルとテキストファイル以外は表示できません。");
+           continue;
+        }
+                // ③エラー発生時の処理
+        reader.onerror = function (evt) {
+            }
+                // ④画像ファイルの場合の処理
+
+                // ⑤テキストファイルの場合の処理
+        if (f.type.match('text.*') ) {
+           // ファイル読取が完了した際に呼ばれる処理
+           reader.onload = function (evt) {
+           // FileReaderが取得したテキストをそのままdivタグに出力
+              //disp.innerHTML ="[ "+ f.name+"]<br/>"+reader.result;
+           }
+           // readAsTextメソッドでファイルの内容を取得
+           reader.readAsText(f, encode_type);    // 'utf-8' 'shift-jis' ･････
+        }
+    }
+}
+>speech[english]
+    */
+   
+    //window.onbeforeunload = function(e){
+      //  e.returnValue = "saveしましたか？";
+    //}
+/*
+>(x+1)²
+>(ax+b)^2
+>(x+1)³
+>calc[
+v=PL²/6EI 
+
+P:23[N]
+E:34
+I:22[W]
+L:200
+日本＝山＋川
+山：14山
+川：20川
+>]
+
+  PL²
+v=‒‒‒
+  6EI
+  */
+ //wrap : off
+}, true);
+
+</script>
+</head>
+<body>
+<textarea id="ID_textarea01" wrap="soft" width="">使い方例→「>」+キーワード+Enterキーで結果が出力されます。例「>help」
+>help
+>plot[y=Math.sin(x)]
+>plot[r=θ]
+サンプルテキスト
+⛰🗼│
+>　　┘
+</textarea>
+</body>
